@@ -14,7 +14,7 @@ const Link = ({ children, selectedPage, setSelectedPage }: LinkProps) => {
         <AnchorLink
             className={`${
                 selectedPage === lowerCase ? "text-primary-300" : ""
-            } `}
+            }`}
             href={`#${lowerCase}`}
             onClick={() => setSelectedPage(lowerCase)}
         >

@@ -12,10 +12,11 @@ import {
 import Logo from "@/assets/Logo.png";
 import MenuData from "@/Data/MenuData/MenuData";
 import Link from "../Link/Link";
+import { SelectedPage } from "@/types/Shared";
 
 interface NavProps {
-    selectedPage: string;
-    setSelectedPage: (value: string) => void;
+    selectedPage: SelectedPage;
+    setSelectedPage: (value: SelectedPage) => void;
 }
 
 const Navbar = ({ selectedPage, setSelectedPage }: NavProps) => {

@@ -29,7 +29,6 @@ gap-16
 
 const Rightdiv = tw.div`
 flex
-justify-between
 items-center
 w-full
 `;

@@ -11,10 +11,14 @@ import {
 
 import Logo from "@/assets/Logo.png";
 import MenuData from "@/Data/MenuData/MenuData";
+import Link from "../Link/Link";
 
-type Props = {};
+interface NavProps {
+    selectedPage: string;
+    setSelectedPage: (value: string) => void;
+}
 
-const Navbar = (props: Props) => {
+const Navbar = ({ selectedPage, setSelectedPage }: NavProps) => {
     return (
         <Maindiv>
             <Nav>
@@ -23,7 +27,13 @@ const Navbar = (props: Props) => {
                     <Rightdiv>
                         <Menuiems>
                             {MenuData.map((item) => (
-                                <Item key={item.id}>{item.name}</Item>
+                                <Item key={item.id}>
+                                    <Link
+                                        children={item.name}
+                                        selectedPage={selectedPage}
+                                        setSelectedPage={setSelectedPage}
+                                    />
+                                </Item>
                             ))}
                         </Menuiems>
                         <Rightinner>

@@ -43,7 +43,6 @@ text-sm
 
 const Item = tw.li` 
 list-none
-cursor-pointer
 hover:text-red-600
 hover:scale-125
 transition
@@ -62,4 +61,41 @@ flex
 gap-8
 `;
 
-export { Maindiv, Nav, Lefdiv, Rightdiv, Menuiems, Item, Signin, Rightinner };
+const MainMobile = tw.div`
+fixed
+right-0
+bottom-0
+z-50
+h-full
+w-[300px]
+bg-primary-100
+drop-shadow-xl
+`;
+
+const CloseIcon = tw.div`
+flex
+justify-end
+p-12
+`;
+
+const MobileMenuItems = tw.div`
+ml-[33%]
+flex
+flex-col
+gap-10
+text-2xl
+`;
+
+export {
+    Maindiv,
+    Nav,
+    Lefdiv,
+    Rightdiv,
+    Menuiems,
+    Item,
+    Signin,
+    Rightinner,
+    CloseIcon,
+    MainMobile,
+    MobileMenuItems,
+};
